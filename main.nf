@@ -353,7 +353,7 @@ process runPlannotate {
     output:    
         path "feature_table.txt", emit: feature_table 
         path "plannotate.json", emit: json
-        path "*annotations.bed", emit: annotations
+        path "*annotations.bed", emit: annotations, optional: true
         path "plannotate_report.json", emit: report
     """
     if [ -e "assemblies/OPTIONAL_FILE" ]; then
